@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Party Session</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <div class="party-container">
+        <h2>Party Session</h2>
+        <div id="user-list">
+            <h3>Listening:</h3>
+            {% for user in users %}
+                <p>{{ user }}</p>
+            {% endfor %}
+        </div>
+        <div id="player-controls">
+            <input type="text" id="playlist-url" placeholder="Enter YouTube Playlist URL">
+            <input type="text" id="song-url" placeholder="Enter YouTube Song URL">
+            <button onclick="playPlaylist()">Play Playlist</button>
+            <button onclick="playSong()">Play Song</button>
+            <button onclick="pauseSong()">Pause</button>
+            <button onclick="nextSong()">Next</button>
+        </div>
+        <div id="video-player"></div>
+    </div>
+</body>
+</html>
