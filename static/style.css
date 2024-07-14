@@ -1,0 +1,63 @@
+body {
+    background: linear-gradient(to right, pink, lightblue);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container, .party-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+}
+
+.login-container h2, .party-container h2 {
+    margin-top: 0;
+}
+
+.login-container input, .party-container button, .party-container input {
+    display: block;
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#user-list h3 {
+    margin-bottom: 5px;
+}
+
+#user-list p {
+    margin: 5px 0;
+}
+
+#player-controls {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+#player-controls button {
+    padding: 10px;
+    background: pink;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+#player-controls button:hover {
+    background: lightblue;
+}
+
+#video-player {
+    margin-top: 20px;
+}
